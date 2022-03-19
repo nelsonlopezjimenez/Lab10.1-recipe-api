@@ -40,7 +40,7 @@ exports.updateRecipe =  function(req, res){
    })
 }
 
-exports.deleteRecipe = function(req, res){
+exports.removeRecipe = function(req, res){
    db.Recipe.remove({_id: req.params.RecipeId})
    .then(function(){
        res.json({message: 'We deleted it!'});

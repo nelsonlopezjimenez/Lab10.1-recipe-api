@@ -8,6 +8,7 @@ const router =  express.Router();
 router.route('/')
  .get(helpers.getRecipes)
  .post(helpers.createRecipe)
+ .delete(helpers.deleteRecipe)
 
 router.route('/:RecipeId')
   .get(helpers.getRecipe)

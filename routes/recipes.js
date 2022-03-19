@@ -12,6 +12,6 @@ router.route('/')
 router.route('/:RecipeId')
   .get(helpers.getRecipe)
   .put(helpers.updateRecipe)
-  .delete(helpers.deleteRecipe)
+  .delete(helpers.removeRecipe)
 
 module.exports = router;

@@ -13,7 +13,7 @@ app.get('/', function (req, res) {
   res.send('this is root route');
 });
 
-app.use('/api/recipe', router);
+app.use('/api/v1/recipe', router);
 
 app.listen(port, function () {
   //console.log("APP IS RUNNING ON PORT " + process.env.PORT);

@@ -1,7 +1,11 @@
-var mongoose = require('mongoose');
+import mongoose from 'mongoose';
+import Recipe from './model-recipe.js';
+
 mongoose.set('debug', true);
-mongoose.connect('mongodb://localhost/lopeznelson');
 
-mongoose.Promise = Promise;
+mongoose.connect('mongodb://localhost/test030');
 
-module.exports.Recipe = require("./recipe");
+// mongoose.Promise = Promise;
+const models = { Recipe };
+
+export default models;

@@ -1,13 +1,16 @@
 import express from 'express';
 import router from './routes/routes-recipe.js';
 import 'dotenv/config';
+import cors from 'cors';
 
 const app = express();
 
 const port = process.env.PORT || 3999;
 
+app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json())
 
 app.get('/', function (req, res) {
   res.send('this is root route');

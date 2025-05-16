@@ -10,6 +10,37 @@
 1. Folder structure using MVC
 
 ### Code
+```js
+{
+  "name": "lab10.1-restful-express-mongo-api",
+  "version": "1.6.0",
+  "description": "from recipes-fullstack-March-2022 express mongo api, refactored",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "mongo",
+    "fullstack",
+    "backend",
+    "api",
+    "RESTful",
+    "REST"
+  ],
+  "author": "Nelson Lopez",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "mongoose": "^8.8.0",
+    "nodemon": "^3.1.7"
+  }
+}
+```
 
     index.js
 

@@ -9,6 +9,33 @@
 1. Refactored into ES6 imports: using default as well as named imports
 1. Folder structure using MVC
 
+~~~
+ C:\Users\localepsilon\Documents\2025-APRIL-Q3-PM\Lab10.1-recipe-api>tree /f
+Folder PATH listing
+Volume serial number is AA58-195E
+C:.
+│   .gitignore
+│   index.js
+│   package-lock.json
+│   package.json
+│   README.md
+│
+├───controllers
+│       controller-recipes.js
+│
+├───models
+│       index.js
+│       model-recipe.js
+│
+├───public
+│       avocado_toast.jpg
+│       milkshake.jpg
+│       spaghetti.jpg
+│
+└───routes
+        routes-recipe.js
+
+~~~
 ### Code
 ```js
 {

@@ -49,18 +49,3 @@ export const errorHandler = (err, req, res, next) => {
   });
 };
 
-// src/middleware/asyncHandler.js
-export const asyncHandler = (fn) => (req, res, next) =>
-  Promise.resolve(fn(req, res, next)).catch(next);
-
-// src/utils/AppError.js
-export class AppError extends Error {
-  constructor(message, statusCode, validationErrors = null) {
-    super(message);
-    this.statusCode = statusCode;
-    this.validationErrors = validationErrors;
-    this.isOperational = true;
-
-    Error.captureStackTrace(this, this.constructor);
-  }
-}

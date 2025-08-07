@@ -116,7 +116,37 @@ Comprehensive documentation includes:
 
 The updated Recipe API is now production-ready with modern best practices, comprehensive testing, and excellent developer experience. All tests pass and provide robust coverage for future development and maintenance.
 
+## Mongo 8 deprecated options issues
+The error is due to deprecated MongoDB connection options. Let me fix the database configuration to use the latest Mongoose 8.x compatible options.Perfect! I've fixed the MongoDB connection issue by removing the deprecated options. The problem was that Mongoose 8.x (which we're using) no longer supports the `bufferMaxEntries` and `bufferCommands` options, as these are now handled internally by the newer version.
 
+## 🔧 **What was fixed:**
+
+1. **Removed deprecated options:**
+   - `bufferMaxEntries: 0` 
+   - `bufferCommands: false`
+
+2. **Kept modern options:**
+   - `maxPoolSize: 10` - Connection pooling
+   - `serverSelectionTimeoutMS: 5000` - Server selection timeout
+   - `socketTimeoutMS: 45000` - Socket timeout
+
+## 🚀 **Now try running the server again:**
+
+```bash
+npm run dev
+```
+
+You should now see successful startup messages:
+```
+🚀 Server running on port 3999
+📱 Environment: development
+🔗 API Base URL: http://localhost:3999/api/v1
+📊 MongoDB Connected: localhost
+🗃️  Database: recipe_dev
+🟢 Mongoose connected to MongoDB
+```
+
+The application should connect successfully to MongoDB without any deprecated option errors. The connection will use the modern Mongoose 8.x internal buffering mechanisms which are more efficient than the old manual configuration.
 ##  Recipe API - Modern Express.js Application
 
 A modern, production-ready Recipe API built with Express.js, MongoDB, and comprehensive testing.

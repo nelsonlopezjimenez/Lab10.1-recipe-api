@@ -13,6 +13,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json())
 
+app.use(express.static('public'));
 app.use('/api/v1/recipe', router);
 
 app.get('/', function (req, res) {

@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
 import Recipe from './model-recipe.js';
+import 'dotenv/config';
 
 /**
  * ============================================================================
@@ -40,7 +41,7 @@ import Recipe from './model-recipe.js';
  * MONGO_CONFIG_SCENARIOS.md and .env.example at the project root.
  * ============================================================================
  */
-mongoose.connect('mongodb://127.0.0.1:27017/test030');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/test030');
 
 // `mongoose.set('debug', true)` makes Mongoose print every query it runs —
 // collection, operation, and filter — to the console. While you're learning,

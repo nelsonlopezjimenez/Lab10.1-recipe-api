@@ -30,6 +30,14 @@ import Recipe from './model-recipe.js';
  * credentials out of source control AND lets the exact same code connect to
  * a local database in development and a hosted one (MongoDB Atlas, etc.) in
  * production — just by changing an environment variable, never the code.
+ *
+ * For a much deeper dive — WHERE this connection code should live (here, vs.
+ * index.js, vs. directly in model-recipe.js — with pros/cons of each), how
+ * to shape the connection string itself, how MongoDB's connection POOLING
+ * actually works (how many connections exist at once, and how operations
+ * queue), and exactly what happens — and how to handle it — when MongoDB
+ * isn't running or the connection drops mid-request, see
+ * MONGO_CONFIG_SCENARIOS.md and .env.example at the project root.
  * ============================================================================
  */
 mongoose.connect('mongodb://127.0.0.1:27017/test030');

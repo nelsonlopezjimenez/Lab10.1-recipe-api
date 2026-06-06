@@ -549,6 +549,13 @@ multi-concept projects." Each connects back to a concept covered above.
   `dotenv` and `import.meta.env.VITE_*` — see the comments in `models/index.js`
   and `src/api.js`), and HTTPS all stop being "best practices to remember
   later" and start being "the reason the deployed app does or doesn't work."
+  For the database connection specifically — where the connection code
+  *should* live, how to externalize the hardcoded URI into an environment
+  variable (a copy-pasteable starting point is in
+  [`.env.example`](.env.example)), how MongoDB's connection pooling actually
+  behaves, and exactly what happens (and how to handle it) when MongoDB
+  isn't reachable — see [`MONGO_CONFIG_SCENARIOS.md`](MONGO_CONFIG_SCENARIOS.md),
+  a deep dive built specifically around this app's own `models/index.js`.
 
 ---
 
